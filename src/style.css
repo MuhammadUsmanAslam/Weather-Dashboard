@@ -1,3 +1,10 @@
-* {
-  color: red;
+footer {
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(241, 219, 189);
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
