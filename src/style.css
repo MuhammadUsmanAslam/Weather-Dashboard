@@ -1,3 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
 * {
-  color: red;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Styling for Header Starts Here */
+
+header {
+  align-items: center;
+  min-height: 3em;
+  width: 70%;
+  margin: auto;
+}
+
+header > a {
+  flex: 0.25;
+}
+
+header > a > img {
+  height: 2em;
+}
+
+header,
+.nav-links {
+  display: flex;
+}
+
+.nav-links {
+  flex: 1;
+  justify-content: space-around;
+}
+
+/* Styling for Header Ends Here */
+
+/* Footer styling starts here */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(241, 219, 189);
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Footer styling ends here */
