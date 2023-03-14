@@ -44,3 +44,18 @@ header,
 }
 
 /* Styling for Header Ends Here */
+
+
+/* Footer styling starts here */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(241, 219, 189);
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+/* Footer styling ends here */
