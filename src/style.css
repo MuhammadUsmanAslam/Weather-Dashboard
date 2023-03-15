@@ -45,11 +45,58 @@ header,
 
 /* Styling for Header Ends Here */
 
+/* Styling for Main section starts Here */
+
+.list {
+  margin: auto;
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.list-item {
+  padding: 0.5em;
+  min-width: 250px;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item > img {
+  width: 100%;
+  height: auto;
+}
+
+.list-item-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 0;
+}
+
+.list-item-likes {
+  text-align: end;
+  padding: 0 0 0.5em 0;
+}
+
+.list-item > button {
+  width: 100%;
+  padding: 0.5em;
+  border: none;
+  cursor: pointer;
+}
+
+.list-item > button:hover {
+  background-color: rgb(250, 235, 215);
+  font-weight: 700;
+}
+
+/* Styling for Main section ends Here */
+
 /* Footer styling starts here */
 
 footer {
-  position: absolute;
-  bottom: 0;
   background-color: rgb(241, 219, 189);
   height: 30px;
   display: flex;
