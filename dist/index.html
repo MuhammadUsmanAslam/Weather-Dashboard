@@ -1,16 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<script defer src="main.js"></script></head>
-<body>
-    <h1>Hello</h1>
-    <h1>Hello</h1>
-    <h1>Hello</h1>
-    <h1>Hello</h1>
-    <h1>Hello</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  <script defer src="main.js"></script></head>
+
+  <body>
+    <header>
+      <a href="#"><img src="./assets/logo.png" alt="logo" /></a>
+      <ul class="nav-links">
+        <li><a href="#">Cities</a></li>
+        <li><a href="#">Planets</a></li>
+        <li><a href="#">Races</a></li>
+      </ul>
+    </header>
+  
+<!--comments  popup -->
+<button class="comment-button" data-city="New York">Comments</button>
+<button class="comment-button" data-city="London">Comments</button>
+<button class="comment-button" data-city="Paris">Comments</button>
+<div id="comments-popup" class="comments-popup">
+  <button class="close-button" onclick="closePopup()">X</button>
+  <div class="popup">
+  <div id="city-details" class="city-details">
+    <h2>City Name</h2>
+    <p>Temperature: <span id="temp"></span></p>
+    <p>Humidity: <span id="humidity"></span></p>
+    <p>Wind Speed: <span id="wind-speed"></span></p>
+  </div>
+  <div class="comments-section">
+    <form>
+    <input type="text" placeholder="Write your name here">
+    <br>
+    <input type="text" placeholder="comment"><br>
+    <button>submit</button>
+  </form>
+  </div>
+</div>
+</div>
+<!-- footer -->
+<footer id="footer">
+      <div class="container footer-section">
+        <p>
+          "Created by"
+          <a href="https://github.com/mumo-esther">Esther Mawioo</a>
+          "&"
+          <a href="https://github.com/MuhammadUsmanAslam"
+            >Muhammad Usman Aslam</a>
+        </p>
+      </div>
+    </footer>
+    <script src="comments.js"></script>
+  </body>
 </html>

@@ -3,7 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 /* eslint-enable */
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/comments.js',
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
