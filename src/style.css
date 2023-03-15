@@ -45,12 +45,13 @@ header,
 
 ul {
   list-style-type: none;
-  margin: 0;
+  margin: auto;
   padding: 0;
   display: flex;
   justify-content: space-evenly;
-  justify-content: center;
   row-gap: 30px;
+  width: 70%;
+  flex-wrap: wrap;
 }
 
 .list-item {
@@ -114,7 +115,8 @@ footer {
 
 /* Footer styling ends here */
 
-/* popup styling */
+/* popup styling starts */
+
 .popup {
   display: none;
   position: fixed;
@@ -175,3 +177,5 @@ footer {
   height: 30px;
   cursor: pointer;
 }
+
+/* popup styling ends */
