@@ -1,4 +1,3 @@
-
 import './style.css';
 import getData from './modules/API.js';
 
@@ -15,4 +14,3 @@ window.addEventListener('load', async () => {
     list.appendChild(listItem);
   });
 });
-
