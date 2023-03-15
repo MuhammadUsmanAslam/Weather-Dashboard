@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4e655bdddb.js" crossorigin="anonymous"></script>
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
   <script defer src="main.js"></script></head>
 
   <body>
@@ -17,21 +17,16 @@
         <li><a href="#">Races</a></li>
       </ul>
     </header>
-  
-<!--comments  popup -->
-<button class="comment-button" data-city="New York">Comments</button>
-<button class="comment-button" data-city="London">Comments</button>
-<button class="comment-button" data-city="Paris">Comments</button>
-<div id="comments-popup" class="comments-popup">
-  <button class="close-button" onclick="closePopup()">X</button>
-  <div class="popup">
-  <div id="city-details" class="city-details">
-    <h2>City Name</h2>
-    <p>Temperature: <span id="temp"></span></p>
-    <p>Humidity: <span id="humidity"></span></p>
-    <p>Wind Speed: <span id="wind-speed"></span></p>
+<!-- footer -->
+<footer id="footer">
+  <ul id="list"></ul>
+
+  <div id="comments-popup">
+    <div class="popup-content">
+      <h2 id="city-details"></h2>
+      <button class="close-button">Close</button>
+    </div>
   </div>
-  <div class="comments-section">
     <form>
     <input type="text" placeholder="Write your name here">
     <br>
@@ -41,8 +36,8 @@
   </div>
 </div>
 </div>
-<!-- footer -->
-<footer id="footer">
+    <footer id="footer">
+
       <div class="container footer-section">
         <p>
           "Created by"
@@ -53,6 +48,5 @@
         </p>
       </div>
     </footer>
-    <script src="comments.js"></script>
   </body>
 </html>

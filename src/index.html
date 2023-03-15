@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/4e655bdddb.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dashboard</title>
   </head>
 
@@ -17,33 +16,30 @@
         <li><a href="#">Races</a></li>
       </ul>
     </header>
+  
+<!--comments  popup -->
+<main>
+  <ul id="list"></ul>
+</main>
+
+<div id="comments-popup" class="popup">
+  <div class="popup-content">
+    <button class="close-button">&times;</button>
+    <div id="city-details"></div>
+    <form>
+      <label for="name-input">Name:</label>
+      <input type="text" id="name-input" name="name" required />
+
+      <label for="comment-input">Comment:</label>
+      <textarea id="comment-input" name="comment" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+    <ul id="comments-list"></ul>
+  </div>
+</div>
 <!-- footer -->
 <footer id="footer">
-    <main>
-        <ul id="list" class="list"></ul>
-    </main>
-    <!--comments  popup -->
-<div id="comments-popup" class="comments-popup">
-  <button class="close-button">X</button>
-  <div class="popup">
-  <div id="city-details" class="city-details">
-    <h2>City Name</h2>
-    <p>Temperature: <span id="temp"></span></p>
-    <p>Humidity: <span id="humidity"></span></p>
-    <p>Wind Speed: <span id="wind-speed"></span></p>
-  </div>
-  <div class="comments-section">
-    <form>
-    <input type="text" placeholder="Write your name here">
-    <br>
-    <input type="text" placeholder="comment"><br>
-    <button>submit</button>
-  </form>
-  </div>
-</div>
-</div>
-    <footer id="footer">
-
       <div class="container footer-section">
         <p>
           "Created by"
