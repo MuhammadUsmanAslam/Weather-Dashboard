@@ -1,12 +1,6 @@
-export const openPopup = async () => {
+export const openPopup = async (data) => {
   const commentsPopup = document.getElementById('comments-popup');
   const cityDetails = document.getElementById('city-details');
-  const API_KEY = '358eb180ada51f6235f6ecc20247a6d1';
-  const cityUrl = 'https://api.openweathermap.org/data/2.5/weather?q=';
-  const city = document.querySelector('.list-item h4').textContent;
-
-  const res = await fetch(`${cityUrl}${city}&appid=${API_KEY}&units=imperial`);
-  const data = await res.json();
 
   const iconUrl = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
   cityDetails.innerHTML = `

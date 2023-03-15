@@ -11,15 +11,15 @@ window.addEventListener('load', async () => {
     listItem.innerHTML = `<img src='./assets/display-img.jpg'/>
       <div class='list-item-head'><h4>${element.name}</h4><i class="fa-regular fa-heart"></i></div>
       <p class='list-item-likes'>5 Likes</p>
-      <button class="comment-button">Comments</button>`;
-    list.appendChild(listItem);
-  });
-
-  const commentButtons = document.querySelectorAll('.comment-button');
-  commentButtons.forEach((button) => {
+      `;
+    const button = document.createElement('button');
+    button.innerText = 'Comments';
+    button.className = 'comment-button';
     button.addEventListener('click', () => {
-      openPopup();
+      openPopup(element);
     });
+    listItem.appendChild(button);
+    list.appendChild(listItem);
   });
 
   const closeBtns = document.querySelectorAll('.close-button');
