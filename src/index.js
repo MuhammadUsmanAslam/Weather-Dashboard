@@ -1,5 +1,7 @@
 import './style.css';
-import { getData, getLikes, addLikes } from './modules/API.js';
+import {
+  getData, getLikes, addLikes, itemsCounter,
+} from './modules/API.js';
 import { openPopup, closePopup } from './modules/comments.js';
 
 const mutateLikes = (weatherList, likesList) => {
@@ -15,24 +17,19 @@ const mutateLikes = (weatherList, likesList) => {
 
 const displayWeather = (dataList) => {
   const list = document.getElementById('list');
+  list.innerHTML = '';
+
   dataList.forEach((element) => {
     const listItem = document.createElement('li');
     listItem.className = 'list-item';
-    listItem.innerHTML = '<img src=\'./assets/display-img.jpg\'/>';
+    listItem.innerHTML = `<img src='https://openweathermap.org/img/w/${element.weather[0].icon}.png'/>`;
     const listItemHead = document.createElement('div');
     listItemHead.className = 'list-item-head';
     listItemHead.innerHTML = `<h4>${element.name}</h4>`;
     const likeBtn = document.createElement('i');
     likeBtn.className = 'fa-regular fa-heart';
-    likeBtn.addEventListener('mouseover', () => {
-      likeBtn.className = 'fa-solid fa-heart';
-    });
-    likeBtn.addEventListener('mouseout', () => {
-      likeBtn.className = 'fa-regular fa-heart';
-    });
-    likeBtn.addEventListener('click', (e) => {
+    likeBtn.addEventListener('click', () => {
       addLikes(element.id);
-      e.target.classList.remove('fa-solid');
     });
     listItemHead.appendChild(likeBtn);
     listItem.appendChild(listItemHead);
@@ -41,6 +38,11 @@ const displayWeather = (dataList) => {
     likes.className = 'list-item-likes';
     likes.innerText = `${element.likes ? element.likes : 0} Likes`;
     listItem.appendChild(likes);
+
+    const listItemBody = document.createElement('div');
+    listItemBody.className = 'list-item-head';
+    listItemBody.innerHTML = `<p>Temprature: ${element.main.temp} &deg;F</p><p>Humidity: ${element.main.humidity}%</p>`;
+    listItem.appendChild(listItemBody);
 
     const button = document.createElement('button');
     button.innerText = 'Comments';
@@ -56,6 +58,8 @@ const displayWeather = (dataList) => {
 window.addEventListener('load', async () => {
   const likesData = await getLikes();
   const dataList = await getData();
+
+  itemsCounter(dataList);
 
   const newDataList = await mutateLikes(dataList, likesData);
 

@@ -1,6 +1,6 @@
 const getData = async () => {
   const API_KEY = '358eb180ada51f6235f6ecc20247a6d1';
-  const URL = `https://api.openweathermap.org/data/2.5/find?lat=10&lon=75&APPID=${API_KEY}`;
+  const URL = `https://api.openweathermap.org/data/2.5/find?lat=37&lon=-122&APPID=${API_KEY}`;
   const res = await fetch(URL);
   const data = await res.json();
   return data.list;
@@ -26,7 +26,12 @@ const addLikes = async (id) => {
       item_id: id,
     }),
   });
-  getLikes();
 };
 
-module.exports = { getData, getLikes, addLikes };
+const itemsCounter = (list) => {
+  document.getElementById('items-count').innerText = `Total Items: ${list.length}`;
+};
+
+module.exports = {
+  getData, getLikes, addLikes, itemsCounter,
+};

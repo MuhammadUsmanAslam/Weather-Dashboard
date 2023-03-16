@@ -19,25 +19,35 @@
     </header>
   
 <main>
-  <ul id="list"></ul>
-    <!--comments  popup Satrts-->
-<div id="comments-popup" class="popup">
-  <div class="popup-content">
-    <button class="close-button">&times;</button>
-    <div id="city-details"></div>
-    <form>
-      <label for="name-input">Name:</label>
-      <input type="text" id="name-input" name="name" required />
+  <h3 id="items-count"></h3>
+  <ul class="list" id="list">
+    <div class="spinner-box">
+      <div class="configure-border-1">
+          <div class="configure-core"></div>
+      </div>
+      <div class="configure-border-2">
+          <div class="configure-core"></div>
+      </div>
+    </div>
+  </ul>
+  <!--comments  popup Satrts-->
+  <div id="comments-popup" class="popup">
+    <div class="popup-content">
+      <button class="close-button">&times;</button>
+      <div id="city-details"></div>
+      <form>
+        <label for="name-input">Name:</label>
+        <input type="text" id="name-input" name="name" required />
 
-      <label for="comment-input">Comment:</label>
-      <textarea id="comment-input" name="comment" required></textarea>
+        <label for="comment-input">Comment:</label>
+        <textarea id="comment-input" name="comment" required></textarea>
 
-      <button type="submit">Submit</button>
-    </form>
-    <ul id="comments-list"></ul>
+        <button type="submit">Submit</button>
+      </form>
+      <ul id="comments-list"></ul>
+    </div>
   </div>
-</div>
-<!--comments  popup Ends-->
+  <!--comments  popup Ends-->
 </main>
     
 
