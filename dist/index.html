@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/4e655bdddb.js" crossorigin="anonymous"></script>
     <title>Weather Dashboard</title>
   <script defer src="main.js"></script></head>
@@ -17,27 +17,42 @@
         <li><a href="#">Races</a></li>
       </ul>
     </header>
-<!-- footer -->
-<footer id="footer">
-  <ul id="list"></ul>
-
-  <div id="comments-popup">
+  
+<main>
+  <h3 id="items-count"></h3>
+  <ul class="list" id="list">
+    <div class="spinner-box">
+      <div class="configure-border-1">
+          <div class="configure-core"></div>
+      </div>
+      <div class="configure-border-2">
+          <div class="configure-core"></div>
+      </div>
+    </div>
+  </ul>
+  <!--comments  popup Satrts-->
+  <div id="comments-popup" class="popup">
     <div class="popup-content">
-      <h2 id="city-details"></h2>
-      <button class="close-button">Close</button>
+      <button class="close-button">&times;</button>
+      <div id="city-details"></div>
+      <form>
+        <label for="name-input">Name:</label>
+        <input type="text" id="name-input" name="name" required />
+
+        <label for="comment-input">Comment:</label>
+        <textarea id="comment-input" name="comment" required></textarea>
+
+        <button id="submit-comment" type="submit">Submit</button>
+      </form>
+      <ul class="comments-section" id="comments-list"></ul>
     </div>
   </div>
-    <form>
-    <input type="text" placeholder="Write your name here">
-    <br>
-    <input type="text" placeholder="comment"><br>
-    <button>submit</button>
-  </form>
-  </div>
-</div>
-</div>
-    <footer id="footer">
+  <!--comments  popup Ends-->
+</main>
+    
 
+<!-- Footer Starts Here -->
+<footer id="footer">
       <div class="container footer-section">
         <p>
           "Created by"
@@ -47,6 +62,7 @@
             >Muhammad Usman Aslam</a>
         </p>
       </div>
-    </footer>
+</footer>
+<!-- Footer Ends Here -->
   </body>
 </html>
