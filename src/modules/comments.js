@@ -1,6 +1,41 @@
+import { postComment, getComments, commentsCounter } from '../modules/API.js';
+
 export const openPopup = async (data) => {
   const commentsPopup = document.getElementById('comments-popup');
   const cityDetails = document.getElementById('city-details');
+
+  const nameInput = document.getElementById('name-input');
+  const commentInput = document.getElementById('comment-input');
+  const submitComment = document.getElementById('submit-comment');
+
+  const commentsList = document.getElementById('comments-list');
+
+  const comments = await getComments(data.id);
+
+  if(!comments.error){
+    commentsList.innerHTML = ``;
+    commentsList.innerHTML = `<p id="comments-count">${commentsCounter(comments)} comments</p>`;
+    comments.forEach((comment) => {
+    const commentItem = document.createElement('li');
+    commentItem.className = 'comment-item';
+    console.log(comment)
+    commentItem.innerHTML = `<p>"${comment.comment}" By '${comment.username}' on "${comment.creation_date}"</p>`;
+    commentsList.appendChild(commentItem);
+  });
+  } else {
+    commentsList.innerHTML = `<p>No comments added yet</p>`
+  }
+  
+  // console.log('Data in coments.js');
+  // console.log(data.id);
+
+  submitComment.addEventListener('click', (e) => {
+    e.preventDefault();
+    postComment(data.id, nameInput.value, commentInput.value);
+    nameInput.value = '';
+    commentInput.value = '';
+    closePopup();
+  })
 
   const iconUrl = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
   cityDetails.innerHTML = `
