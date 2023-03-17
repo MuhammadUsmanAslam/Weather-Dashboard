@@ -41,9 +41,9 @@ const postComment = async (id, name, comment) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-        "item_id": id,
-        "username": name,
-        "comment": comment
+      item_id: id,
+      username: name,
+      comment,
     }),
   });
   return res;
@@ -61,10 +61,8 @@ const getComments = async (id) => {
   return res.json();
 };
 
-const commentsCounter = (comments) => {
-  return comments.length;
-}
+const commentsCounter = (comments) => comments.length;
 
 module.exports = {
-  getData, getLikes, addLikes, itemsCounter, postComment, getComments, commentsCounter
+  getData, getLikes, addLikes, itemsCounter, postComment, getComments, commentsCounter,
 };

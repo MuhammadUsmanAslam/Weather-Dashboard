@@ -8,8 +8,7 @@ describe('Items Counter', () => {
     expect(response).toBe(1);
   });
   test('Comments Counter', async () => {
-    const response = await commentsCounter([{ username: '', comment:'', creation_date: '' }]);
-      expect(response).toBe(1);
+    const response = await commentsCounter([{ username: '', comment: '', creation_date: '' }]);
+    expect(response).toBe(1);
   });
 });
-

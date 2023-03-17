@@ -55,7 +55,6 @@ ul {
 .list {
   min-height: 82vh;
   margin: 1em auto;
-  
   margin: auto;
   padding: 0;
   display: flex;
@@ -203,7 +202,7 @@ input[type="text"],
 textarea {
   padding: 10px;
   border-radius: 5px;
-  border: 3px solid rgb(241, 238, 238)smoke;
+  border: 3px solid rgb(241, 238, 238);
   margin-bottom: 10px;
   width: 100%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -226,6 +225,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #3e8e41;
 }
+
 /* popup styling ends */
 
 /* Footer styling starts here */

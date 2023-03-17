@@ -1,4 +1,9 @@
-import { postComment, getComments, commentsCounter } from '../modules/API.js';
+import { postComment, getComments, commentsCounter } from './API.js';
+
+export const closePopup = () => {
+  const commentsPopup = document.getElementById('comments-popup');
+  commentsPopup.style.display = 'none';
+};
 
 export const openPopup = async (data) => {
   const commentsPopup = document.getElementById('comments-popup');
@@ -12,22 +17,18 @@ export const openPopup = async (data) => {
 
   const comments = await getComments(data.id);
 
-  if(!comments.error){
-    commentsList.innerHTML = ``;
+  if (!comments.error) {
+    commentsList.innerHTML = '';
     commentsList.innerHTML = `<p id="comments-count">${commentsCounter(comments)} comments</p>`;
     comments.forEach((comment) => {
-    const commentItem = document.createElement('li');
-    commentItem.className = 'comment-item';
-    console.log(comment)
-    commentItem.innerHTML = `<p>"${comment.comment}" By '${comment.username}' on "${comment.creation_date}"</p>`;
-    commentsList.appendChild(commentItem);
-  });
+      const commentItem = document.createElement('li');
+      commentItem.className = 'comment-item';
+      commentItem.innerHTML = `<p>"${comment.comment}" By '${comment.username}' on "${comment.creation_date}"</p>`;
+      commentsList.appendChild(commentItem);
+    });
   } else {
-    commentsList.innerHTML = `<p>No comments added yet</p>`
+    commentsList.innerHTML = '<p>No comments added yet</p>';
   }
-  
-  // console.log('Data in coments.js');
-  // console.log(data.id);
 
   submitComment.addEventListener('click', (e) => {
     e.preventDefault();
@@ -35,7 +36,7 @@ export const openPopup = async (data) => {
     nameInput.value = '';
     commentInput.value = '';
     closePopup();
-  })
+  });
 
   const iconUrl = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
   cityDetails.innerHTML = `
@@ -47,9 +48,4 @@ export const openPopup = async (data) => {
     `;
 
   commentsPopup.style.display = 'block';
-};
-
-export const closePopup = () => {
-  const commentsPopup = document.getElementById('comments-popup');
-  commentsPopup.style.display = 'none';
 };
