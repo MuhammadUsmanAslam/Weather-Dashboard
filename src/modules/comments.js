@@ -30,7 +30,7 @@ export const openPopup = async (data) => {
     commentsList.innerHTML = '<p>No comments added yet</p>';
   }
 
-  submitComment.addEventListener('click', async(e) => {
+  submitComment.addEventListener('click', async (e) => {
     e.preventDefault();
     await postComment(data.id, nameInput.value, commentInput.value);
     closePopup();
