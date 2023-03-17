@@ -14,6 +14,7 @@
     - [Setup](#setup)
     - [Install](#install)
     - [Usage](#usage)
+    - [Test](#test)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -105,6 +106,13 @@ npm i
 To run the project, execute the following command: 
 ```bash
 npm run server
+```
+
+### Test
+
+To run unit tests for this the project, execute the following command: 
+```bash
+npm run test
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
