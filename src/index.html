@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/4e655bdddb.js" crossorigin="anonymous"></script>
+    <title>Weather Dashboard</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="#"><img src="./assets/logo.png" alt="logo" /></a>
+      <ul class="nav-links">
+        <li><a href="#">Cities</a></li>
+        <li><a href="#">Planets</a></li>
+        <li><a href="#">Races</a></li>
+      </ul>
+    </header>
+  
+<main>
+  <h3 id="items-count"></h3>
+  <ul class="list" id="list">
+    <div class="spinner-box">
+      <div class="configure-border-1">
+          <div class="configure-core"></div>
+      </div>
+      <div class="configure-border-2">
+          <div class="configure-core"></div>
+      </div>
+    </div>
+  </ul>
+  <!--comments  popup Satrts-->
+  <div id="comments-popup" class="popup">
+    <div class="popup-content">
+      <div id="city-details"></div>
+      <button class="close-button">&times;</button>
+      <ul class="comments-section" id="comments-list"></ul>
+      <form>
+        <label for="name-input">Name:</label>
+        <input type="text" id="name-input" name="name" required placeholder="Your Name"/>
+
+        <label for="comment-input">Comment:</label>
+        <textarea id="comment-input" name="comment" required placeholder="Your Comment"></textarea>
+
+        <button class="comment-submit" id="submit-comment" type="submit">Comment</button>
+      </form>
+    </div>
+  </div>
+  <!--comments  popup Ends-->
+</main>
+    
+
+<!-- Footer Starts Here -->
+<footer id="footer">
+      <div class="container footer-section">
+        <p>
+          "Created by"
+          <a href="https://github.com/mumo-esther">Esther Mawioo</a>
+          "&"
+          <a href="https://github.com/MuhammadUsmanAslam"
+            >Muhammad Usman Aslam</a>
+        </p>
+      </div>
+</footer>
+<!-- Footer Ends Here -->
+  </body>
+</html>
