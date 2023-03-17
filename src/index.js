@@ -27,18 +27,16 @@ const displayWeather = (dataList) => {
     listItemHead.className = 'list-item-head';
     listItemHead.innerHTML = `<h4>${element.name}</h4>`;
     const likeBtn = document.createElement('i');
-
-    const likes = document.createElement('p');
-
     likeBtn.className = 'fa-regular fa-heart';
     likeBtn.addEventListener('click', () => {
       addLikes(element.id);
-      element.likes += 1;
+      element.likes = element.likes + 1;
       likes.innerText = `${element.likes ? element.likes : 0} Likes`;
     });
     listItemHead.appendChild(likeBtn);
     listItem.appendChild(listItemHead);
 
+    const likes = document.createElement('p');
     likes.className = 'list-item-likes';
     likes.innerText = `${element.likes ? element.likes : 0} Likes`;
     listItem.appendChild(likes);
