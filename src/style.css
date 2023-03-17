@@ -129,6 +129,7 @@ ul {
 }
 
 .popup-content {
+  position: relative;
   text-align: center;
   background-color: #fff;
   padding: 30px;
@@ -170,6 +171,10 @@ ul {
   margin-bottom: 20px;
 }
 
+.comment-submit {
+  align-self: flex-start;
+}
+
 .close-button {
   position: absolute;
   top: 10px;
@@ -190,7 +195,7 @@ ul {
 form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 label {
@@ -201,8 +206,8 @@ label {
 input[type="text"],
 textarea {
   padding: 10px;
-  border-radius: 5px;
-  border: 3px solid rgb(241, 238, 238);
+  border-radius: 3px;
+  border: 2px solid rgb(241, 238, 238);
   margin-bottom: 10px;
   width: 100%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -219,7 +224,7 @@ button[type="submit"] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 }
 
 button[type="submit"]:hover {

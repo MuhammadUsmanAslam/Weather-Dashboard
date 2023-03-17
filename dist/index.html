@@ -33,18 +33,18 @@
   <!--comments  popup Satrts-->
   <div id="comments-popup" class="popup">
     <div class="popup-content">
-      <button class="close-button">&times;</button>
       <div id="city-details"></div>
+      <button class="close-button">&times;</button>
+      <ul class="comments-section" id="comments-list"></ul>
       <form>
         <label for="name-input">Name:</label>
-        <input type="text" id="name-input" name="name" required />
+        <input type="text" id="name-input" name="name" required placeholder="Your Name"/>
 
         <label for="comment-input">Comment:</label>
-        <textarea id="comment-input" name="comment" required></textarea>
+        <textarea id="comment-input" name="comment" required placeholder="Your Comment"></textarea>
 
-        <button id="submit-comment" type="submit">Submit</button>
+        <button class="comment-submit" id="submit-comment" type="submit">Comment</button>
       </form>
-      <ul class="comments-section" id="comments-list"></ul>
     </div>
   </div>
   <!--comments  popup Ends-->

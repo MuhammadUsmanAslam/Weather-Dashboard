@@ -30,12 +30,13 @@ export const openPopup = async (data) => {
     commentsList.innerHTML = '<p>No comments added yet</p>';
   }
 
-  submitComment.addEventListener('click', (e) => {
+  submitComment.addEventListener('click', async(e) => {
     e.preventDefault();
-    postComment(data.id, nameInput.value, commentInput.value);
+    await postComment(data.id, nameInput.value, commentInput.value);
+    closePopup();
+    openPopup(data);
     nameInput.value = '';
     commentInput.value = '';
-    closePopup();
   });
 
   const iconUrl = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
